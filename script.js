@@ -5,7 +5,7 @@ let flutterApp = (application) =>
   new Promise(async (resolve, reject) => {
     console.log(application);
     const baseElement = document.querySelector("base");
-    baseElement.setAttribute("href", `/${application}/build/web/`);
+    baseElement.setAttribute("href", `/mutiple-flutter-application-demo/${application}/build/web/`);
 
     const response = await fetch(
       `/mutiple-flutter-application-demo/${application}/build/web/flutter_bootstrap.js`
