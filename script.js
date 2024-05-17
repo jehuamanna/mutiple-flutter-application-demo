@@ -8,7 +8,7 @@ let flutterApp = (application) =>
     baseElement.setAttribute("href", `/${application}/build/web/`);
 
     const response = await fetch(
-      `/${application}/build/web/flutter_bootstrap.js`
+      `/mutiple-flutter-application-demo/${application}/build/web/flutter_bootstrap.js`
     );
     const text = await response.text();
     const initialization =
@@ -23,7 +23,7 @@ let flutterApp = (application) =>
         let engine = await engineInitializer.initializeEngine({
           multiViewEnabled: true,
           renderer: "canvaskit",
-          assetBase: `/${application}/build/web/`,
+          assetBase: `/mutiple-flutter-application-demo/${application}/build/web/`,
         });
         let app = engine.runApp();
         console.log(await app);
